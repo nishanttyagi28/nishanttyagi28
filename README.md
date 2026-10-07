@@ -6,30 +6,30 @@ AI Engineer. I build and ship evaluation, runtime-trust, and multi-agent systems
 
 **Shipped**
 
-- **AgentEval** — published PyPI package (`nishanttyagi-agenteval`). **1115** deterministic tests. CI regression gates. Failure Memory. Adapters for LangGraph, CrewAI, AutoGen, and the OpenAI Agents SDK.
-- **KarmaSakshi Protocol** — runtime trust protocol: cryptographic effect sealing, TOCTOU revalidation, exactly-once execution, independent verification, Action Passports. **1049** tests, **74** security invariants.
+- **AgentEval** — published PyPI package (`nishanttyagi-agenteval`, v0.5.0). Deterministic test suite. CI regression gates. Failure Memory. Adapters for LangGraph, CrewAI, AutoGen, and the OpenAI Agents SDK.
+- **KarmaSakshi Protocol** — runtime trust protocol: cryptographic effect sealing, TOCTOU revalidation, exactly-once execution, independent verification, Action Passports. Security invariants documented and mapped to tests.
 - **Agentic Data Analyst** — live multi-agent analytics: text-to-SQL, AutoML, forecasting, statistical tests, RAG.
-- Production **TypeScript / Next.js 15** — [portfolio site](https://nishant-tyagi-six.vercel.app), deployed on Vercel.
+- Personal site in **TypeScript / Next.js 15** — [portfolio](https://nishant-tyagi-six.vercel.app), deployed on Vercel.
 
 ## Featured projects
 
 ### [AgentEval](https://github.com/nishanttyagi28/agenteval)
 
-Evaluation infrastructure for AI agents. YAML goldens, baseline compare, and PR gates for correctness, tools, trajectories, flakiness, RAG, and cost. v0.3.0 adds Failure Memory: redact → cluster → replay → minimize → human approve → CI.
+Evaluation infrastructure for AI agents. YAML goldens, baseline compare, and PR gates for correctness, tools, trajectories, flakiness, RAG, and cost. Failure Memory: redact → cluster → replay → minimize → human approve → CI.
 
 ```text
-pip install nishanttyagi-agenteval==0.3.0
+pip install nishanttyagi-agenteval
 ```
 
-v0.3.0: **1115 passed, 1 skipped**. Failure Memory: **59 passed**. Local-first. Nothing auto-enters blocking CI.
+v0.5.0, alpha. Local-first. Nothing auto-enters blocking CI.
 
-[Repo](https://github.com/nishanttyagi28/agenteval) · [PyPI](https://pypi.org/project/nishanttyagi-agenteval/) · [v0.3.0](https://github.com/nishanttyagi28/agenteval/releases/tag/v0.3.0) · [Dashboard](https://agenteval-6honbe24hradazngswxkrq.streamlit.app/)
+[Repo](https://github.com/nishanttyagi28/agenteval) · [PyPI](https://pypi.org/project/nishanttyagi-agenteval/) · [v0.5.0](https://github.com/nishanttyagi28/agenteval/releases/tag/v0.5.0) · [Dashboard](https://agenteval-6honbe24hradazngswxkrq.streamlit.app/)
 
 ### [KarmaSakshi Protocol](https://github.com/nishanttyagi28/karmasakshi-protocol)
 
 Runtime protocol for consequential agent actions. Approval is bound to one sealed effect, not a tool name. Commit-time TOCTOU checks. Exactly-once reservation. Independent re-observation. Audit chain + Action Passport. The agent never holds a signing key.
 
-v0.2.0 experimental, evaluation-ready — not a certified payment product. **1049 tests**, **90.5% coverage**, `mypy --strict` clean.
+v0.2.0 experimental, evaluation-ready — not a certified payment product. `mypy` strict mode in CI.
 
 [Repo](https://github.com/nishanttyagi28/karmasakshi-protocol) · [PyPI](https://pypi.org/project/karmasakshi-protocol/)
 
