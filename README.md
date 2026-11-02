@@ -1,56 +1,38 @@
 # Nishant Tyagi
 
-AI Engineer. I build and ship evaluation, runtime-trust, and multi-agent systems.
+Python backend developer. I build APIs and services with FastAPI, PostgreSQL and Docker, and I also work on GenAI (RAG, LLM evaluation) and data analytics.
 
-[Portfolio](https://nishant-tyagi-six.vercel.app) · [PyPI](https://pypi.org/project/nishanttyagi-agenteval/) · [AgentEval](https://github.com/nishanttyagi28/agenteval) · [KarmaSakshi](https://github.com/nishanttyagi28/karmasakshi-protocol)
+## What I build
 
-**Shipped**
+- REST APIs and backend services in Python, mostly FastAPI on PostgreSQL
+- Database work: schema design, SQLAlchemy models, Alembic migrations, backup and restore checks
+- Services that are tested and shipped properly: pytest, Docker, GitHub Actions CI
+- GenAI backends: RAG pipelines and LLM/agent evaluation
+- Data analytics: SQL, dbt and Power BI on public datasets
 
-- **AgentEval** — published PyPI package (`nishanttyagi-agenteval`, v0.5.0). Deterministic test suite. CI regression gates. Failure Memory. Adapters for LangGraph, CrewAI, AutoGen, and the OpenAI Agents SDK.
-- **KarmaSakshi Protocol** — runtime trust protocol: cryptographic effect sealing, TOCTOU revalidation, exactly-once execution, independent verification, Action Passports. Security invariants documented and mapped to tests.
-- **Agentic Data Analyst** — live multi-agent analytics: text-to-SQL, AutoML, forecasting, statistical tests, RAG.
-- Personal site in **TypeScript / Next.js 15** — [portfolio](https://nishant-tyagi-six.vercel.app), deployed on Vercel.
+## Featured backend projects
 
-## Featured projects
+| Project | What it does | Tests |
+|---|---|---|
+| [pgrestoredrill](https://github.com/nishanttyagi28/pgrestoredrill) | FastAPI service that restores Postgres backups into throwaway databases, runs assertions against them and alerts when RPO is breached. Prometheus metrics, Docker and Kubernetes deployment. | 208 tests, 95% coverage |
+| [Aravali AP Desk](https://github.com/nishanttyagi28/aravali-ap-desk) | Accounts-payable backend on FastAPI and PostgreSQL. | 170 tests |
+| [KarmaSakshi Protocol](https://github.com/nishanttyagi28/karmasakshi-protocol) | Signed, auditable approvals for actions taken by AI agents. | 1,079 tests |
+| [approve-exact](https://github.com/nishanttyagi28/approve-exact) | Human approvals bound to a hash of the exact action, so nothing else can run on that approval. | 81 tests |
 
-### [AgentEval](https://github.com/nishanttyagi28/agenteval)
+## GenAI and data work
 
-Evaluation infrastructure for AI agents. YAML goldens, baseline compare, and PR gates for correctness, tools, trajectories, flakiness, RAG, and cost. Failure Memory: redact → cluster → replay → minimize → human approve → CI.
+- [AgentEval](https://github.com/nishanttyagi28/agenteval): toolkit for evaluating LLM apps and agents, published on PyPI as [`nishanttyagi-agenteval`](https://pypi.org/project/nishanttyagi-agenteval/)
+- [Trade war analysis](https://github.com/nishanttyagi28/tariffs-oil-american-wallet): Python ingestion, dbt models and SQL analyses on public trade and price data
 
-```text
-pip install nishanttyagi-agenteval
-```
+## Stack
 
-v0.5.0, alpha. Local-first. Nothing auto-enters blocking CI.
+- **Backend:** Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Redis
+- **Infra and testing:** Docker, Kubernetes, pytest, GitHub Actions
+- **GenAI:** RAG, LLM evaluation
+- **Data:** SQL, dbt, Power BI
 
-[Repo](https://github.com/nishanttyagi28/agenteval) · [PyPI](https://pypi.org/project/nishanttyagi-agenteval/) · [v0.5.0](https://github.com/nishanttyagi28/agenteval/releases/tag/v0.5.0) · [Dashboard](https://agenteval-6honbe24hradazngswxkrq.streamlit.app/)
+## Contact
 
-### [KarmaSakshi Protocol](https://github.com/nishanttyagi28/karmasakshi-protocol)
+I'm open to Python Backend, Junior Backend, FastAPI and AI Backend roles.
 
-Runtime protocol for consequential agent actions. Approval is bound to one sealed effect, not a tool name. Commit-time TOCTOU checks. Exactly-once reservation. Independent re-observation. Audit chain + Action Passport. The agent never holds a signing key.
-
-v0.2.0 experimental, evaluation-ready — not a certified payment product. `mypy` strict mode in CI.
-
-[Repo](https://github.com/nishanttyagi28/karmasakshi-protocol) · [PyPI](https://pypi.org/project/karmasakshi-protocol/)
-
-### [Agentic Data Analyst](https://github.com/nishanttyagi28/agentic-data-analyst)
-
-Multi-agent system behind one chat: quality gate, SELECT-only SQL, stats, forecasts, AutoML with leakage flags, HTML reports, ChromaDB session memory.
-
-[Repo](https://github.com/nishanttyagi28/agentic-data-analyst) · [Live](https://agentic-data-analyst-uqjwnx2jwzd2pe9vosnffw.streamlit.app/)
-
-## Engineering
-
-- Gate agent behavior in CI. A green demo is not a regression test.
-- Verify the approved effect at runtime. Allow/deny is not proof.
-- Keep scores honest. Provider and evaluator failures are not agent failures.
-
-## Current focus
-
-AgentEval and KarmaSakshi as a pair: offline regression gates plus runtime verification for actions that hit money, mail, or data.
-
-Python · pytest · GitHub Actions · LangGraph · FastAPI · TypeScript · Next.js
-
-## Links
-
-[Portfolio](https://nishant-tyagi-six.vercel.app) · [GitHub](https://github.com/nishanttyagi28) · [LinkedIn](https://www.linkedin.com/in/nishant-tyagi-7aa458356) · [X](https://x.com/tnishant838)
+LinkedIn: [linkedin.com/in/nishant-tyagi-dev](https://www.linkedin.com/in/nishant-tyagi-dev/)
